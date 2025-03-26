@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Sidergin_web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/styles.css">
 </head>
 <body>
-    @* <header> 
+   @*  <header> 
           <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
               <div class="container-fluid">
-                  <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sidergin_web</a>
+                  <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sidergin</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                           aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
@@ -23,16 +26,13 @@
                               <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Giới thiệu</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Tin tức</a>
+                              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Tin tức</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Trợ giúp</a>
-                          </li>
-                                                  <li class="nav-item">
-                              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Tin tức</a>
+                              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">Trợ giúp</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Liên hệ</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Liên hệ</a>
                           </li>
                           <li class="nav-item">
                               <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Đăng nhập/Đăng ký</a>
@@ -41,7 +41,22 @@
                   </div>
               </div>
           </nav>
-    </header>*@
+    </header> *@
+    <header class="header">
+        <div class="logo">
+            <h1><span class="highlight">S</span>IDERGIN</h1>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#" class="nav-link active">Giới thiệu</a></li>
+                <li><a href="#" class="nav-link">Tin tức</a></li>
+                <li><a href="#" class="nav-link">Trợ giúp</a></li>
+                <li><a href="#" class="nav-link">Liên hệ</a></li>
+                <li><a href="#" class="nav-link auth-btn">Đăng nhập/Đăng ký</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -49,8 +64,30 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Sidergin_web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="footer-content">
+            <div class="company-info">
+                <h3>Nhà phân phối Thuốc Việt số 1</h3>
+                <p>Địa chỉ: 123 Đường Số 1, Quận 1, TP. Hồ Chí Minh</p>
+                <p>Mã số: .................................</p>
+                <p>Điện thoại: 0123456789</p>
+                <p>Zalo: 0123456789</p>
+                <p>Email: <a href="mailto:admin123@gmail.com">admin123@gmail.com</a></p>
+            </div>
+            <div class="footer-links">
+                <h3>Chính sách hỗ trợ</h3>
+                <ul>
+                    <li><a href="#">Chính sách mua hàng</a></li>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Chính sách đổi trả hàng</a></li>
+                    <li><a href="#">Bảo mật thông tin khách hàng</a></li>
+                    <li><a href="#">Chính sách bảo vệ dữ liệu chung</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 SIDERGIN. Tất cả quyền được bảo lưu.</p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
